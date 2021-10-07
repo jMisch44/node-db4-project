@@ -25,8 +25,13 @@ async function getRecipeById(recipe_id) {
             return {
                 step_id: obj.step_id,
                 step_number: obj.step_number,
-                step_instructions: obj.step_instructions,
-                ingredients: [],
+                step_instructions: obj.step_instruction,
+                ingredients: [
+                    { 
+                        ingredient_id: obj.ingredient_id,
+                        ingredient_name: obj.ingredient_name, 
+                        quantity: obj.quantity
+                    }],
             }
         })
       }
