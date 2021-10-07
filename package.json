@@ -2,7 +2,8 @@
   "name": "node-db4-project",
   "version": "1.0.0",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "seed": "knex seed:run"
   },
   "repository": {
     "type": "git",

@@ -3,7 +3,7 @@ exports.up = async function(knex) {
   await knex.schema.createTable(('recipes'), table => {
       table.increments('recipe_id')
       table.string('recipe_name').unique().notNullable()
-      table.datetime('created_at')
+      table.timestamp('created_at').defaultTo(knex.fn.now())
   })
   .createTable(('ingredients'), table => {
       table.increments('ingredient_id')
